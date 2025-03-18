@@ -1,0 +1,266 @@
+*{
+    
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#wrapper{
+    background-repeat: no-repeat;
+    background-color: blanchedalmond;
+}
+
+.map{
+    background-color: white;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.jumbotron h2{
+    font-size: 700%;
+}
+
+h3{
+    text-decoration: underline;
+    font-style: oblique;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+nav{
+    color: sienna;
+}
+
+.navbar{
+    border: 2px solid sienna;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    padding: 3px;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: brown;
+}
+
+.nav-link{
+    font-size: 2rem;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.jumbotron{
+    background-color: blanchedalmond;
+    border: 1px solid sienna;
+}
+
+.jumbotron .stinger{
+    min-height: 15%;
+    max-height: 25%;
+    max-width: 60%;
+}
+
+.darkContrast{
+    background-color: rgb(150, 235, 223);
+}
+
+.card{
+    background-color: rgb(233, 221, 190);
+}
+
+.cardContainer{
+	display: flex; 
+	flex-wrap: wrap; 
+	flex-direction: row; 
+	flex: auto;
+}
+
+.cardLayout{
+	display: flex; 
+	flex-basis: 300px; 
+	flex-direction: column; 
+	align-items: center; 
+	flex-grow: 1; 
+	border: 1px solid black;
+ 	margin: 1%;
+ 	background-color: #ffe7ba; 
+}
+.cardLayout img{
+	max-width: 100%;
+}
+
+.btn {
+    background-color: #ffffff; 
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1%;
+    margin-bottom: 2%;
+    width: 50%;
+    color:black;
+  }
+
+.flex-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticker{
+    width: 10%;
+}
+
+.table{
+    background-repeat: no-repeat;
+}
+
+.calcTable{
+    background-color: lightsteelblue;
+    border: 2px solid black;
+    width: 30%;
+}
+
+.pointsTable{
+    border: 2px solid black;
+}
+
+.featured{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.elementTable{
+    border: 1px solid black;
+    background-color: rgb(255, 217, 191);
+    max-width: 100%;
+} 
+
+.elementTable td, tr, th{
+    border: 1px solid black;
+    padding-right: 2%;
+}
+
+th{
+    font-size: large;
+}
+
+.elementTable tr:nth-child(even) {
+    background-color: #ffcece;
+}
+
+.elementTable tr:nth-child(odd) {
+    background-color: #e2fffb;
+}
+
+.narrow{
+    width: 10%;
+}
+
+.wider{
+    width: 30%
+}
+
+.tile{
+    flex-direction: column;
+    border: 1px solid sienna;
+    margin: 1rem;
+    padding: .5rem;
+    max-width: 30%;
+    background-color: rgb(233, 218, 198);
+}
+
+.tileCard{
+    width: 100%;
+}
+
+#formCanvas {
+    width: 100vw; 
+    max-width: 1200px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.articleTile{
+    max-width: 20%;
+    min-height: 20%;
+    background-color: rgb(153, 202, 179);
+}
+
+footer{
+    font-size: medium;
+    padding-top: 2%;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 800px){
+    .tile{
+        max-width: 80%;
+    }
+
+    .elementTable{
+        width: 200%;
+    }
+
+    .elementTable tr{
+        font-size: smaller;
+        max-height: 1%;
+        font-size: auto;
+    }
+}
+
+@media (max-width: 575px){
+    p{
+        font-size: medium;
+    }
+}
+
+@media (max-width: 500px){
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .jumbotron h2{
+        font-size: 300%;
+    }
+
+    p{
+        font-size: small;
+    }
+
+    a{
+        font-size: medium;
+    }
+
+    *{
+        padding: 1px;
+        margin: 1px;
+    }
+}
