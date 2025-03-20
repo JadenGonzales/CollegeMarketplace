@@ -220,6 +220,41 @@ iframe {
     max-width: 1200px;
 }
 
+.items {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.item {
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+}
+.cart {
+    width: 25%;
+    border: 1px solid black;
+    padding: 10px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: #f9f9f9;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 @media (max-width: 800px){
     .tile{
         max-width: 80%;

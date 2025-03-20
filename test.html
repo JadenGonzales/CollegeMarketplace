@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Cart</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .items {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .item {
+            border: 1px solid black;
+            padding: 10px;
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+        }
+        .cart {
+            width: 25%;
+            border: 1px solid black;
+            padding: 10px;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background: #f9f9f9;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .remove-btn {
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="items">
+        <div class="item" onclick="addToCart('Item A')">Item A</div>
+        <div class="item" onclick="addToCart('Item B')">Item B</div>
+        <div class="item" onclick="addToCart('Item C')">Item C</div>
+    </div>
+
+    <div class="cart">
+        <h3>Cart</h3>
+        <div id="cart-items"></div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(itemName) {
+            cart.push(itemName);
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartContainer = document.getElementById('cart-items');
+            cartContainer.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                let cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `${item} <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>`;
+                cartContainer.appendChild(cartItem);
+            });
+        }
+    </script>
+
+</body>
+</html>
