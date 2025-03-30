@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(dbUser1); // This will log the value of NEXT_PUBLIC_DB_USER1
     const dbPass1 = import.meta.env.NEXT_PUBLIC_DB_PASS1;
 
+    console.log(import.meta.env);  // Logs all available environment variables
+
+
     // Function to set a cookie
     function setCookie(name, value, days) {
         let expires = "";
