@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const welcomeMessage = document.getElementById("welcomeMessage");
+    const dbUser1 = process.env.DB_USER1;
+    const dbPass1 = process.env.DB_PASS1;
 
     // Function to set a cookie
     function setCookie(name, value, days) {
@@ -39,11 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Simple mock authentication (replace with real node service login)
         if (username === "admin" && password === "password123") {
-            setCookie("username", username, 1); // Set cookie for 1 day
+            setCookie("admin", username, 1); // Set cookie for 1 day
             localStorage.setItem("user", username);
             alert("Login successful!");
             location.reload();
-        } else {
+        if (username === dbUser1 && password === dbPass1) {
+            setCookie("User 1", username, 1); // Set cookie for 1 day
+            localStorage.setItem("user", username);
+            alert("Login successful!");
+            location.reload();
+        } 
+        else {
             alert("Invalid username or password.");
         }
     });
