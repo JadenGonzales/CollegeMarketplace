@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const welcomeMessage = document.getElementById("welcomeMessage");
-    const dbUser1 = import.meta.env.NEXT_PUBLIC_DB_USER1; 
+    const dbUser1 = import.meta.env.VITE_NEXT_PUBLIC_DB_USER1;
+    console.log(dbUser1); // This will log the value of NEXT_PUBLIC_DB_USER1
     const dbPass1 = import.meta.env.NEXT_PUBLIC_DB_PASS1;
 
     // Function to set a cookie
