@@ -40,13 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value;
 
         // Simple mock authentication (replace with real node service login)
-        if (username === "admin" && password === "password123") {
+        if ((username === "admin" && password === "password123")||(username === dbUser1 && password === dbPass1)) {
             setCookie("admin", username, 1); // Set cookie for 1 day
-            localStorage.setItem("user", username);
-            alert("Login successful!");
-            location.reload();
-        if (username === dbUser1 && password === dbPass1) {
-            setCookie("User 1", username, 1); // Set cookie for 1 day
             localStorage.setItem("user", username);
             alert("Login successful!");
             location.reload();
