@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Pass");
         const newUsername = document.getElementById("usernameCreate").value;
         const newPassword = document.getElementById("passwordCreate").value;
-        const newPasswordConfirm = document.getElementById("passwordConfrim").value;
+        const newPasswordConfirm = document.getElementById("passwordConfirm").value;
 
         // Mock user creation (Replace with a real backend service)
         if(newPasswordConfirm == newPassword)
