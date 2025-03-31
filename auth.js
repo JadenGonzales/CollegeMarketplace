@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signUpForm");
     const welcomeMessage = document.getElementById("welcomeMessage");
     //const dbUser1 = process.env.NEXT_PUBLIC_DB_USER1;
     //console.log(dbUser1); // This will log the value of NEXT_PUBLIC_DB_USER1
