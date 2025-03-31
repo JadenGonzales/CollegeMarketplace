@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     signupForm.addEventListener("submit", function (event) {
         event.preventDefault();
+        console.log("Pass");
         const newUsername = document.getElementById("usernameCreate").value;
         const newPassword = document.getElementById("passwordCreate").value;
         const newPasswordConfirm = document.getElementById("passwordConfrim").value;
