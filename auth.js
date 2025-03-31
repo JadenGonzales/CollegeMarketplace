@@ -56,11 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     signupForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        const newUsername = document.getElementById("signupUsername").value;
-        const newPassword = document.getElementById("signupPassword").value;
+        const newUsername = document.getElementById("usernameCreate").value;
+        const newPassword = document.getElementById("passwordCreate").value;
+        const newPasswordConfirm = document.getElementById("passwordConfrim").value;
 
         // Mock user creation (Replace with a real backend service)
-        localStorage.setItem(newUsername, newPassword);
-        alert("Account created successfully! You can now sign in.");
+        if(newPasswordConfirm == newPassword)
+        {
+            localStorage.setItem(newUsername, newPassword);
+            alert("Account created successfully! You can now sign in.");
+        };
     });
 });
