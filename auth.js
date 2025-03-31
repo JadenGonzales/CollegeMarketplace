@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Handle login
-    loginForm.addEventListener("submitLogin", function (event) {
+    loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
@@ -52,5 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
         else {
             alert("Invalid username or password.");
         }
+    });
+
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const newUsername = document.getElementById("signupUsername").value;
+        const newPassword = document.getElementById("signupPassword").value;
+
+        // Mock user creation (Replace with a real backend service)
+        localStorage.setItem(newUsername, newPassword);
+        alert("Account created successfully! You can now sign in.");
     });
 });
