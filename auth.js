@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const welcomeMessage = document.getElementById("welcomeMessage");
-    //const dbUser1 = process.env.NEXT_PUBLIC_DB_USER1;
+    const dbUser1 = process.env.NEXT_PUBLIC_DB_USER1;
     //console.log(dbUser1); // This will log the value of NEXT_PUBLIC_DB_USER1
     //const dbPass1 = import.meta.env.NEXT_PUBLIC_DB_PASS1;
     //console.log(import.meta.env);  // Logs all available environment variables
     const dbPass1 = "password"
-    const dbUser1 = "username"
+    //const dbUser1 = "username"
     // Function to set a cookie
     function setCookie(name, value, days) {
         let expires = "";
