@@ -30,39 +30,29 @@
         </div>
         <div class="jumbotron stinger" style="background-color: aqua; background-size: contain;">
             <div class="row" style="background-color:rgba(255, 255, 255, 0.8);">
-                <h2 class="bg col-12 center" style="background-color:rgba(255, 255, 255, 0);">Home</h2> <br>
+                <h2 class="bg col-12 center" style="background-color:rgba(255, 255, 255, 0);">Shop</h2> <br>
             </div>
         </div>
     
         <div>
-            <p class="center" style="font-style: italic;">Tagline</p>
+            <p class="center" style="font-style: italic;">Browse our products</p>
         </div>
 
         <div class="flex-grid">
-            <div class="tile">
-              <a href="shop.html" class="center">
-                <img src="images/cart.png" class="tileCard" style="max-height: 250px">
-                <h2>Shop</h2>  
-              </a>
-            </div>
+            <div class="tile item" onclick="addToCart('ebook')">
+                <img src="images/bookClosed.png" class="tileCard">
+                <h2>E-Book</h2>
+          </div>
   
-            <div class="tile">
-                <a href="Haicia.html" class="center">
-                  <img src="images/mouse.png" class="tileCard">
-                  <h2>Digital</h2>
-                </a>
-            </div>
-  
-            <div class="tile">
-              <a href="Koia.html" class="center">
-                <img src="images/bulb.png" class="tileCard">
-                <h2>Support</h2>
-              </a>
-            </div>
+            <div class="tile item" onclick="addToCart('Mouse')">
+                <img src="images/mouse.png" class="tileCard">
+                <h2>USB mouse</h2>
+          </div>
         </div>
-
-<!--INSERT ROW OF CARDS-->
-
+    </div>
+    <div class="cart">
+        <h3>Cart</h3>
+        <div id="cart-items"></div>
     </div>
 </main>	
 
@@ -70,6 +60,33 @@
 
 
   <!-- Optional JavaScript -->
+
+  <script>
+    let cart = [];
+
+    function addToCart(itemName) {
+        cart.push(itemName);
+        updateCart();
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    function updateCart() {
+        let cartContainer = document.getElementById('cart-items');
+        cartContainer.innerHTML = '';
+
+        cart.forEach((item, index) => {
+            let cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `${item} <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>`;
+            cartContainer.appendChild(cartItem);
+        });
+    }
+</script>
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="footerFetch.js"></script>
   <script src="fetch.js"></script>
