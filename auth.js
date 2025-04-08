@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             localStorage.setItem(newUsername, newPassword);
             alert("Account created successfully! You can now sign in.");
+        }
+        else{
+            alert("Password does not match!");
         };
     });
 });
